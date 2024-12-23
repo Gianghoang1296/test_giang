@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    let domain =[];
+    let sub_domain=[];
+    let sum=0;
+    for(let i= 0; i<=50;i++){
+        domain.push(i);
+        if (i%3 ===0){
+           sum += i;
+
+        }
+
+    }
+    debugger
+    for(let j= 0; j<=50;j+=3){
+        sub_domain.push(j);
+    }
+
+ let average =sum/sub_domain.length;
+    document.write(average)
+
+
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+</body>
+<script>
+    var month = parseInt(prompt("nhập tháng"));
+    var year = parseInt(prompt("năm"));
+    let isLeapYear = false;
+
+    if (year % 4 ===0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+
+
+    let month_2 = isLeapYear ? 29 : 28;
+
+    document.write(month_2)
+    switch(month){
+        case 1 : document.getElementById('show').innerHTML =  '31';
+            break;
+        case 3 :document.getElementById('show').innerHTML =  '31';
+            break;
+        case 5 :document.getElementById('show').innerHTML = '31';
+            break;
+        case 7 :document.getElementById('show').innerHTML = '31';
+            break;
+        case 8 :document.getElementById('show').innerHTML = '31';
+            break;
+        case 10 :document.getElementById('show').innerHTML = '31';
+            break;
+        case 12 :document.getElementById('show').innerHTML = '31';
+            break;
+        case 4:  document.getElementById('show').innerHTML = '30';
+            break;
+        case 6: document.getElementById('show').innerHTML = '30';
+            break;
+        case 9: document.getElementById('show').innerHTML = '30';
+            break;
+        case 11: document.getElementById('show').innerHTML = '30';
+            break;
+        case 2: document.getElementById('show').innerHTML = month_2;
+
+    }
+</script>
+
+</html>
